@@ -1,0 +1,671 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://example.com/5moodle.html">
+      
+      <link rel="icon" href="images/urplogo.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>Moodle sobre Ubuntu - Documentación del Proceso de Instalación de Ubuntu</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4cae4f">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="green" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#moodle-sobre-ubuntu" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="index.html" title="Documentación del Proceso de Instalación de Ubuntu" class="md-header__button md-logo" aria-label="Documentación del Proceso de Instalación de Ubuntu" data-md-component="logo">
+      
+  <img src="images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentación del Proceso de Instalación de Ubuntu
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Moodle sobre Ubuntu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="index.html" title="Documentación del Proceso de Instalación de Ubuntu" class="md-nav__button md-logo" aria-label="Documentación del Proceso de Instalación de Ubuntu" data-md-component="logo">
+      
+  <img src="images/logo.png" alt="logo">
+
+    </a>
+    Documentación del Proceso de Instalación de Ubuntu
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="index.html" class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Procedimientos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Procedimientos" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Procedimientos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="1antes.html" class="md-nav__link">
+        Antes de Instalar Moodle en Ubuntu 22.04 LTS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="2mariadb.html" class="md-nav__link">
+        Instalando MariaDB en Ubuntu 22.04 LTS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="3apache.html" class="md-nav__link">
+        Instalación Apache Web Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="4php.html" class="md-nav__link">
+        Instalación PHP 7.4 en Ubuntu
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Moodle sobre Ubuntu
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="5moodle.html" class="md-nav__link md-nav__link--active">
+        Moodle sobre Ubuntu
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-moodle" class="md-nav__link">
+    Archivos de Moodle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-de-datos" class="md-nav__link">
+    Base de Datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mariadbmysql" class="md-nav__link">
+    MARIADB/MYSQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalador-web" class="md-nav__link">
+    Instalador web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-instalacion" class="md-nav__link">
+    Post Instalación
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Nosotros
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Nosotros" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Nosotros
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="nosotros.html" class="md-nav__link">
+        Integrantes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="vers.html" class="md-nav__link">
+        Versión de la Documentación
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-de-moodle" class="md-nav__link">
+    Archivos de Moodle
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#base-de-datos" class="md-nav__link">
+    Base de Datos
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mariadbmysql" class="md-nav__link">
+    MARIADB/MYSQL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#php" class="md-nav__link">
+    PHP
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalador-web" class="md-nav__link">
+    Instalador web
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#post-instalacion" class="md-nav__link">
+    Post Instalación
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="moodle-sobre-ubuntu">Moodle sobre Ubuntu</h1>
+<p>Descargamos Moodle de la siguiente manera: <strong>wget</strong> <a href="https://download.moodle.org/download.php/direct/stable400/moodle-latest-400.tgz">Enlace</a></p>
+<p>Para poder <strong>instalar Moodle en Ubuntu 22.04 LTS Jammy Jellyfish</strong> será necesario realizar una serie de pasos antes de poder lanzar el instalador web. Vamos a ver a continuación dichos pasos, así como la instalación vía web y algún trabajo de post-instalación.</p>
+<h3 id="archivos-de-moodle"><strong>Archivos de Moodle</strong></h3>
+<p>Descomprimimos el paquete que acabamos de descargar directamente en la ubicación final de la plataforma:</p>
+<div class="highlight"><pre><span></span><code>sudo tar xf moodle-latest-400.tgz -C /var/www/html/
+</code></pre></div>
+<p>Creamos el directorio de datos de Moodle fuera de los directorios navegables:</p>
+<div class="highlight"><pre><span></span><code>sudo mkdir /var/www/moodledata
+</code></pre></div>
+<p>Como Moodle necesita escribir en ambos directorios a través del servicio web, cambiamos la propiedad de estos directorios al usuario con el que corre dicho servicio en Ubuntu 22.04 LTS:</p>
+<div class="highlight"><pre><span></span><code>sudo chown www-data: /var/www/{moodledata,html/moodle}
+</code></pre></div>
+<h3 id="base-de-datos"><strong>Base de Datos</strong></h3>
+<p>Moodle trabaja sobre una base de datos que debemos crear y configurar antes de la instalación, siendo soportados varios de los motores de bases de datos más usados en Ubuntu 22.04 LTS.</p>
+<h3 id="mariadbmysql"><strong>MARIADB/MYSQL</strong></h3>
+<p>Conectamos al servicio con el cliente de consola y un usuario administrador:</p>
+<div class="highlight"><pre><span></span><code>mysql -u root -p
+</code></pre></div>
+<p>Creamos la base de datos:</p>
+<div class="highlight"><pre><span></span><code>create database moodle character set utf8mb4 collate utf8mb4_unicode_ci;
+</code></pre></div>
+<p>Creamos el usuario con su contraseña:</p>
+<div class="highlight"><pre><span></span><code> grant all privileges on moodle.* to moodle@localhost;
+</code></pre></div>
+<p>Luego:</p>
+<div class="highlight"><pre><span></span><code> exit
+</code></pre></div>
+<h3 id="php"><strong>PHP</strong></h3>
+<p>Moodle requiere la presencia en Ubuntu 22.04 LTS de ciertas extensiones de este lenguaje de programación que instalaremos, teniendo en cuenta la versión presente en el sistema, con apt; por ejemplo, para la versión 7.4:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install -y php7.4-{curl,gd,intl,mbstring,soap,xml,xmlrpc,zip}
+</code></pre></div>
+<p>También debemos realizar algún ajuste de configuración en el archivo php.ini, así que lo editamos:</p>
+<div class="highlight"><pre><span></span><code>sudo vim /etc/php/7.4/apache2/php.ini
+</code></pre></div>
+<p>La activaremos eliminando el carácter ; al inicio de línea y modificamos su valor al mínimo recomendado:</p>
+<div class="highlight"><pre><span></span><code>max_input_vars = 5000
+</code></pre></div>
+<p>Guardamos el archivo y recargamos la configuración del servicio para aplicar todos estos cambios:</p>
+<div class="highlight"><pre><span></span><code>sudo systemctl reload apache2
+</code></pre></div>
+<h3 id="instalador-web"><strong>Instalador web</strong></h3>
+<p>Para <strong>acceder al instalador web de Moodle en Ubuntu 22.04 LTS desde un navegador</strong> formaremos una URL con la dirección del servidor (IP, dominio, nombre DNS, etc.) añadiendo la ruta de instalación dentro de la estructura de archivos web (<mark>/moodle en este tutorial</mark>).</p>
+<p>Por ejemplo, la máquina Ubuntu 22.04 LTS Jammy Jellyfish sobre la que hemos preparado este tutorial es accesible en el subdominio ubuntu2204.local.lan, por lo que usaremos <a href="http://ubuntu2204.local.lan/moodle">http://ubuntu2204.local.lan/moodle</a> como URL:</p>
+<p><img alt="01" src="images/moodle01.png" /></p>
+<p>Seguidamente configuramos la conexión al servicio de bases de datos que hemos elegido:</p>
+<p><img alt="02" src="images/moodle02.png" /></p>
+<p>Seguidamente configuramos la conexión al servicio de bases de datos que hemos elegido:</p>
+<p><img alt="03" src="images/moodle03.png" />
+<img alt="04" src="images/moodle04.png" />
+<img alt="05" src="images/moodle05.png" /></p>
+<p>Clic en continuar</p>
+<p><img alt="06" src="images/moodle06.png" />
+<img alt="07" src="images/moodle07.png" /></p>
+<p>Ahora configuramos el usuario administrador.</p>
+<p><img alt="08" src="images/moodle08.png" /></p>
+<p>Igualmente, en la siguiente sección añadiremos información de identificación del nuevo sitio Moodle:</p>
+<p><img alt="09" src="images/moodle09.png" />
+<img alt="010" src="images/moodle010.png" />
+<img alt="011" src="images/moodle011.png" /></p>
+<h3 id="post-instalacion"><strong>Post Instalación</strong></h3>
+<p>Moodle requiere la creación de una tarea programada del servicio Cron de Ubuntu 22.04 LTS para el mantenimiento en segundo plano de la aplicación.
+Creamos el archivo de configuración de la tarea:</p>
+<div class="highlight"><pre><span></span><code>sudo vim /etc/cron.d/moodle
+</code></pre></div>
+<p>Con la siguiente línea como contenido:</p>
+<div class="highlight"><pre><span></span><code>*/1 * * * * www-data /usr/bin/php /var/www/html/moodle/admin/cli/cron.php
+</code></pre></div>
+<p>Una vez guardado este archivo la tarea programada se lanzará regularmente en el intervalo especificado, que en este caso es de 1 minuto. Tal vez te parezca poco tiempo, pero es lo que requiere Moodle.</p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Pie" >
+      
+        
+        <a href="4php.html" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Instalación PHP 7.4 en Ubuntu" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              Instalación PHP 7.4 en Ubuntu
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="nosotros.html" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Integrantes" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              Integrantes
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.expand"], "search": "assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.config.lang": "es", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "B\u00fasqueda", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version.title": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>

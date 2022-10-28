@@ -1,0 +1,32 @@
+site_name: Documentación del Proceso de Instalación de Ubuntu
+site_url : https://example.com/
+use_directory_urls : false
+
+nav:
+- Home: index.md
+- Procedimientos:
+    - Antes de Instalar Moodle en Ubuntu 22.04 LTS: 1antes.md
+    - Instalando MariaDB en Ubuntu 22.04 LTS: 2mariadb.md
+    - Instalación Apache Web Server: 3apache.md
+    - Instalación PHP 7.4 en Ubuntu: 4php.md
+    - Moodle sobre Ubuntu: 5moodle.md
+- Nosotros: 
+    - Integrantes: nosotros.md
+    - Versión de la Documentación: vers.md
+
+markdown_extensions:
+    - pymdownx.emoji     
+    - pymdownx.tasklist  
+    - pymdownx.mark      
+    - pymdownx.tilde     
+    - pymdownx.highlight 
+
+theme:
+  language: es
+  name: material
+  features:
+    - navigation.expand
+  palette:
+    primary: green
+  logo: images/logo.png
+  favicon: images/urplogo.png
